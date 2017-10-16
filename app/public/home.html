@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Friend Finder - The Bootcamp Exercise</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <meta charset="UTF-8">
+    <title>Friend Finder - The Bootcamp Exercise</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../server.js"></script>
 </head>
 <body>
-
-  <container>
-    <div class="jumbotron">
-      <h1>Friend Finder (not THAT kind of friend...)</h1>
-      <hr>
-      <h3>Take the survey, answer some questions...</h3>
-      <h3>After the survey, we'll suggest a friend that answered the questions the same as you - you'll have so much in common! <italics>*dripping sarcasm*</italics></h3>
-      <hr>
-      <a href="/survey" class="btn btn-lg btn-success">Go To Survey</a>
-    </div>
-  </div>
-</container>
-<container>
-    <a href="/api/getfriendslist">API to list possible friends</a>
-     | 
-    <a href="https://github.com/KyleKowalski/FriendFinder">GitHub Repository</a>
-</container>
-
+    <container>
+        <div class="jumbotron text-center">
+            <h1>Friend Finder</h1>
+            <h2>(not THAT kind of friend...)</h2>
+            <hr>
+            <h3>Take the survey, answer some questions...</h3>
+            <h3>After the survey, we'll suggest a friend that answered similarly.</h3>
+            <h3>You'll have so much in common! <italics>*dripping sarcasm*</italics></h3>
+            <hr>
+            <a href="/survey" class="btn btn-lg btn-success">Go To Survey</a>
+        </div>
+    </container>
+    <container>
+        <a href="/api/getfriendslist">API to list possible friends</a>
+        | 
+        <a href="https://github.com/KyleKowalski/FriendFinder" target="new">GitHub Repository</a>
+    </container>
 </body>
 </html>

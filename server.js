@@ -1,6 +1,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+var fs = require("fs");
+var friendList = require("./app/data/friendsList.json");
 
 var app = express();
 var PORT = 3000;
@@ -31,7 +33,7 @@ app.post("/api/postsurvey", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body-parser middleware
     var newFriend = req.body;
-    console.log(newFriend.q1);
+    // console.log(newFriend.q1);
     // console.log(newReservation.phone);
     // console.log(newReservation.numberOfPeeps);
 
@@ -39,3 +41,29 @@ app.post("/api/postsurvey", function(req, res) {
 
     res.end();
 });
+
+// function Friend (name, photo, answerArray) {
+//     this.name = name;
+//     this.photo = photo;
+//     this.answerArray = answerArray;
+// }
+
+function writeFriendToFile() {
+    var friendObject = {
+        // TODO validation
+        name: "bob", //$("#name").val(),
+        // TODO validation
+        photo: "photo url pending", //$("#photo").val(),
+        // TODO validation
+        answerArray: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+    };
+    console.log(friendObject);
+    friendList.push(friendObject);
+    fs.writeFile('./app/data/friendsList.json', JSON.stringify(friendList, null, 2), function(err) {
+        if (err) {
+            console.log(err);
+        }
+    });
+}
+
+writeFriendToFile();
