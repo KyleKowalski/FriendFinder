@@ -153,9 +153,37 @@
         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
     </container>
     <container>
-        <a href="/api/getfriendslist">API to list possible friends</a>
+        <a href="/api/getfriendlist">API to list possible friends</a>
         | 
         <a href="https://github.com/KyleKowalski/FriendFinder" target="new">GitHub Repository</a>
     </container>
+
+    <script>
+        $("#submit").on("click", function(){
+            // TODO data validation - insure no nulls
+            var friendObject = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            answerArray: [$("#q1").val(), 
+                        $("#q2").val(), 
+                        $("#q3").val(), 
+                        $("#q4").val(), 
+                        $("#q5").val(), 
+                        $("#q6").val(), 
+                        $("#q7").val(), 
+                        $("#q8").val(), 
+                        $("#q9").val(), 
+                        $("#q10").val()]
+            };
+            console.log(friendObject);
+            
+
+            $.post("/api/postfriend", friendObject, function(returnObject){
+                console.log(`returned items: ${returnObject}`);
+
+                // TODO do something with the return object (present it on a modal)
+            })
+        });
+    </script>
 </body>
 </html>

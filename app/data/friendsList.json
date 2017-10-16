@@ -1,12 +1,7 @@
 [
   {
-    "type": "BasicCard",
-    "front": "Who was the first president of the United States?",
-    "back": "George Washington"
-  },
-  {
-    "name": "bob",
-    "photo": "photo url pending",
+    "name": "Bob",
+    "photo": "https://yt3.ggpht.com/-uJh4oSQAwak/AAAAAAAAAAI/AAAAAAAAAAA/AMGKfKvDP3w/s900-c-k-no-mo-rj-c0xffffff/photo.jpg",
     "answerArray": [
       1,
       2,
@@ -18,6 +13,86 @@
       3,
       4,
       5
+    ]
+  },
+  {
+    "name": "The One",
+    "photo": "https://media2.giphy.com/media/l0ExncehJzexFpRHq/giphy.gif",
+    "answerArray[]": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Mr Two",
+    "photo": "https://media0.giphy.com/media/26gsqQxPQXHBiBEUU/giphy.gif",
+    "answerArray[]": [
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2"
+    ]
+  },
+  {
+    "name": "Ms Three",
+    "photo": "https://media1.giphy.com/media/3o7aD1S2Qz3uAWtQkw/giphy.gif",
+    "answerArray[]": [
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3"
+    ]
+  },
+  {
+    "name": "FOUR",
+    "photo": "https://media1.giphy.com/media/l3V0vxrOHW5zPfd96/giphy.gif",
+    "answerArray[]": [
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4",
+      "4"
+    ]
+  },
+  {
+    "name": "El Fiverino",
+    "photo": "https://media.giphy.com/media/l0MYvylkok81GPD20/giphy.gif",
+    "answerArray[]": [
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5"
     ]
   }
 ]
