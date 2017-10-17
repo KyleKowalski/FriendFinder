@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <script src="../app/data/friend.js"></script> -->
 
 </head>
 <body>
@@ -160,29 +161,54 @@
 
     <script>
         $("#submit").on("click", function(){
-            // TODO data validation - insure no nulls
-            var friendObject = {
-            name: $("#name").val(),
-            photo: $("#photo").val(),
-            answerArray: [$("#q1").val(), 
-                        $("#q2").val(), 
-                        $("#q3").val(), 
-                        $("#q4").val(), 
-                        $("#q5").val(), 
-                        $("#q6").val(), 
-                        $("#q7").val(), 
-                        $("#q8").val(), 
-                        $("#q9").val(), 
-                        $("#q10").val()]
+            let name = $("#name").val().trim();
+            let photo = $("#photo").val().trim();
+            let q1 = $("#q1").val().trim();
+            let q2 = $("#q2").val().trim();
+            let q3 = $("#q3").val().trim();
+            let q4 = $("#q4").val().trim();
+            let q5 = $("#q5").val().trim();
+            let q6 = $("#q6").val().trim();
+            let q7 = $("#q7").val().trim();
+            let q8 = $("#q8").val().trim();
+            let q9 = $("#q9").val().trim();
+            let q10 = $("#q10").val().trim();
+            
+            if (name == null || name == "", 
+                photo == null || photo == "",
+                q1 == null || q1 == "",
+                q2 == null || q2 == "",
+                q3 == null || q3 == "",
+                q4 == null || q4 == "",
+                q5 == null || q5 == "",
+                q6 == null || q6 == "",
+                q7 == null || q7 == "",
+                q8 == null || q8 == "",
+                q9 == null || q9 == "",
+                q10 == null || q10 == ""
+            ) {
+                alert("Please fill out all of the fields and questions.");
+                return false;
+            }
+            
+            friendObject = {
+                name: name,
+                photo: photo,
+                answerArray: [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
             };
             console.log(friendObject);
             
-
-            $.post("/api/postfriend", friendObject, function(returnObject){
-                console.log(`returned items: ${returnObject}`);
-
+            // $.post({url: '/api/postfriend', contentType: 'application/json'}, JSON.stringify(friendObject));
+            $.ajax({
+                type: "POST",
+                url: '/api/postfriend', 
+                data: friendObject, 
+                dataType: 'json',
+                success: function(returnObject){
+                console.log(`returned items: ${returnObject}`)}
                 // TODO do something with the return object (present it on a modal)
-            })
+            });
+            // TODO clear out all the vals when done
         });
     </script>
 </body>
