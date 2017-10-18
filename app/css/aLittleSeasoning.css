@@ -1,0 +1,12 @@
+#friendModal {
+    height: 400px;
+}
+
+.margin5, h2, h3, h4, input, select, button{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.form-control, .btn {
+    width: 90%
+}

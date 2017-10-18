@@ -12,4 +12,8 @@ module.exports = function(app){
     app.get("/clickyLogic.js", function(req, res) {
         res.sendFile('clickyLogic.js', { root: './app/js' })
     })
+
+    app.get("/aLittleSeasoning.css", function(req, res) {
+        res.sendFile('aLittleSeasoning.css', { root: './app/css' })
+    })
 }
