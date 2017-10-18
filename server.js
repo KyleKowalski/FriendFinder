@@ -10,9 +10,10 @@
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(bodyParser.json());
 
-    app.listen(PORT, function() {
-        console.log("App listening on PORT " + PORT);
-    });
+    app.listen(process.env.PORT || 3000);
+//     app.listen(PORT, function() {
+//         console.log("App listening on PORT " + PORT);
+//     });
 
     // routing reference: https://stackoverflow.com/questions/6059246/how-to-include-route-handlers-in-multiple-files-in-express
     require("./app/routing/htmlRoutes.js")(app);
