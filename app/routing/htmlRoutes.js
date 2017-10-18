@@ -9,4 +9,7 @@ module.exports = function(app){
         res.sendFile('survey.html', { root: './app/public' })
     });
 
+    app.get("/clickyLogic.js", function(req, res) {
+        res.sendFile('clickyLogic.js', { root: './app/js' })
+    })
 }
