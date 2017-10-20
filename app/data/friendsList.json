@@ -110,5 +110,37 @@
       "2",
       "4"
     ]
+  },
+  {
+    "name": "Kyle Kowalski",
+    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAy5AAAAJDFmY2U4MjQwLWE5NDktNDFiNC1hZDY2LWNhM2UwZWRlYjZjNQ.jpg",
+    "answerArray": [
+      "4",
+      "4",
+      "5",
+      "2",
+      "5",
+      "1",
+      "2",
+      "4",
+      "2",
+      "4"
+    ]
+  },
+  {
+    "name": "Randy Random",
+    "photo": "http://rimworldwiki.com/images/thumb/3/33/Randy.png/250px-Randy.png",
+    "answerArray": [
+      "4",
+      "2",
+      "4",
+      "1",
+      "2",
+      "3",
+      "5",
+      "5",
+      "1",
+      "3"
+    ]
   }
 ]
